@@ -9,6 +9,8 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+ <!-- Other head elements -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div id="video-background">
@@ -21,7 +23,7 @@
       
         <nav>
             <a href="../index.html"><i class="fas fa-home"></i> Home</a>
-            <a href="#about"><i class="fas fa-graduation-cap"></i> About me</a>
+            <a href="#about"><i class="fas fa-graduation-cap"></i>about me</a>
             <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
             <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
             <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
@@ -45,24 +47,48 @@
             <h2>Skills</h2>
             <div class="skills-container">
                 <div class="skill">
-                    <h3>Frontend 8%</h3>
+                    <h3>Frontend -3 months experience-</h3>
                     <div class="progress-bar">
                         <div class="progress" style="width: 8%;"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <h3>Backend 5%</h3>
+                    <h3>Backend -2 months experience-</h3>
                     <div class="progress-bar">
                         <div class="progress" style="width: 5%;"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <h3>Love to Learn 100%</h3>
+                    <h3>Love to Learn -23 years-</h3>
                     <div class="progress-bar">
                         <div class="progress" style="width: 100%;"></div>
                     </div>
                 </div>
                 <!-- Additional skills -->
+                <div class="skills-icons">
+                    <i class="fab fa-js-square" title="JavaScript"> JavaScript</i>
+                    <i class="fab fa-html5" title="HTML5">HTML5</i>
+                    <i class="fab fa-css3-alt" title="CSS3">CSS3</i>
+                    <i class="fab fa-php" title="PHP">PHP</i>
+                    <i class="fab fa-python" title="Django">Django</i>
+                </div>
+                <style>
+                    .skills-icons {
+                        display: flex;
+                        justify-content: space-around;
+                        padding: 20px 0;
+                    }
+                
+                    .skills-icons i {
+                        font-size: 40px;
+                        margin: 0 10px;
+                        color: #333;
+                    }
+                
+                    .skills-icons i:hover {
+                        color: #007bff;
+                    }
+                </style>
             </div>
         </section>
 
@@ -87,16 +113,135 @@
             <form action="#" method="post" id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-
+        
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-
+        
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+        
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
-
+        
                 <button type="submit" class="btn">Send</button>
             </form>
+        
+            <div class="social-media-icons">
+                <a href="https://www.linkedin.com/in/alexander-covi" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/alexcovi1" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/your-profile" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
         </section>
+        
+        <style>
+            #contact-form {
+                display: flex;
+                flex-direction: column;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f9f9f9;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+        
+            #contact-form label {
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+        
+            #contact-form input,
+            #contact-form textarea {
+                margin-bottom: 15px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+        
+            #contact-form button.btn {
+                background-color: #007bff;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+        
+            #contact-form button.btn:hover {
+                background-color: #0056b3;
+            }
+        
+            .social-media-icons {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+        
+            .social-media-icons a {
+                margin: 0 10px;
+                font-size: 24px;
+                color: #333;
+            }
+        
+            .social-media-icons a:hover {
+                color: #007bff;
+            }
+        </style>
+
+          <!-- Back to Top Button -->
+          <button onclick="topFunction()" id="backToTopBtn" title="Go to top">Top</button>
+
+          <script>
+              //Get the button
+              var mybutton = document.getElementById("backToTopBtn");
+  
+              // When the user scrolls down 20px from the top of the document, show the button
+              window.onscroll = function() {scrollFunction()};
+  
+              function scrollFunction() {
+                  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                      mybutton.style.display = "block";
+                  } else {
+                      mybutton.style.display = "none";
+                  }
+              }
+  
+              // When the user clicks on the button, scroll to the top of the document
+              function topFunction() {
+                  document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
+              }
+          </script>
+  
+          <style>
+              #backToTopBtn {
+                  display: none; /* Hidden by default */
+                  position: fixed; /* Fixed/sticky position */
+                  bottom: 20px; /* Place the button at the bottom of the page */
+                  right: 30px; /* Place the button 30px from the right */
+                  z-index: 99; /* Make sure it does not overlap */
+                  border: none; /* Remove borders */
+                  outline: none; /* Remove outline */
+                  background-color: #555; /* Set a background color */
+                  color: white; /* Text color */
+                  cursor: pointer; /* Add a mouse pointer on hover */
+                  padding: 15px; /* Some padding */
+                  border-radius: 10px; /* Rounded corners */
+                  font-size: 18px; /* Increase font size */
+              }
+  
+              #backToTopBtn:hover {
+                  background-color: #333; /* Add a dark-grey background on hover */
+              }
+          </style>
     </main>
 
     <footer>
