@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Alexander Covi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div id="video-background">
+        <video id="background-video" loop muted autoplay>
+            <source src="../video/video2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+      
+        <nav>
+            <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="#about"><i class="fas fa-graduation-cap"></i> About me</a>
+            <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
+            <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <p>Hello! I'm Alexander Covi, a passionate web developer with a love for creating dynamic and responsive web applications. With a strong foundation in both frontend and backend technologies, I strive to build seamless and user-friendly experiences.</p>
+                <p>In my free time, I enjoy exploring new technologies, contributing to open-source projects, and continuously learning to improve my skills. I'm always excited to take on new challenges and collaborate with others to bring innovative ideas to life.</p>
+                <p>Feel free to download my CV to learn more about my professional journey and skills.</p>
+                <a href="../documents/covi-alexander-CV.pdf" download class="btn-download-cv">
+                    <i class="fas fa-download"></i> Download My CV
+                </a>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>Frontend 8%</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 8%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Backend 5%</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 5%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Love to Learn 100%</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <!-- Additional skills -->
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>GitHub Projects</h3>
+                    <p>Check out my projects on 
+                        <a href="https://github.com/alexcovi1" target="_blank"  class="github-link">
+                            <i class="fab fa-github">my github</i>
+                        </a>
+                    </p>
+                </div>
+                <!-- Additional project cards -->
+            </div>
+         
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post" id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Alexander Covi. All Rights Reserved.</p>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
